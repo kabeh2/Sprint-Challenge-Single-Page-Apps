@@ -1,4 +1,5 @@
 # Sprint Challenge: Single Page Applications
+
 ## Rick & Morty Edition
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Single Page Applications, React Router I - II, and React Forms.
@@ -9,7 +10,7 @@ This challenge allows you to practice the concepts and techniques learned over t
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate with students during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support by reaching out through DM to your TL. 
+You are not allowed to collaborate with students during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support by reaching out through DM to your TL.
 You have **three hours to complete** this challenge. **Plan your time accordingly.**
 
 ## Commits
@@ -24,28 +25,30 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
-- [ ] What does AJAX stand for?
-> Answer:
-- [ ] What are `controlled components` in React?
-> Answer:
+- [x] Explain benefit(s) using `client-side routing`?
 
+  > Answer: Client-side routing is when the route is handled internally by the JavaScript that is loaded on the page. All data is initially loaded, which may take longer, but increases speed thereafter going from link to link. It does not reload the page as data is initially loaded, as opposed to server-side routing which loads a new page with all data after every link click.
+
+- [x] What does AJAX stand for?
+
+  > Answer: Asynchronous Javascript and XML
+
+- [x] What are `controlled components` in React?
+  > Answer: Controlled components is a form element controlled by state.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on GitHub.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on this branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
-- [ ] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
-- [ ] **RUN** `yarn start` or `npm start` to fire up your React application.
-
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on GitHub.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [x] Implement the project on this branch, committing changes regularly.
+- [x] Push commits: `git push origin <firstName-lastName>`.
+- [x] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
+- [x] **RUN** `yarn start` or `npm start` to fire up your React application.
 
 #### Exceeded rate limits?
 
@@ -57,8 +60,8 @@ If the [main API service](https://rickandmortyapi.com/documentation) goes down, 
 [**Backup URL:**](https://rick-api.herokuapp.com/api/) `https://rick-api.herokuapp.com/api/`
 
 You can still be locked out - watch your [chrome devtools' network panel](https://developers.google.com/web/tools/chrome-devtools/network/reference) to make sure you aren't making too many requests.
-</details>
 
+</details>
 
 [Instructions to completing](#completing)
 
@@ -67,8 +70,8 @@ You can still be locked out - watch your [chrome devtools' network panel](https:
 > The MVP of this project is broken up between a couple parts.
 
 1. Plan: Divide your allowed time, use either 15, 30 or 60 minute intervals.
-    1. Plan estimated targets or waypoints ("By the '1 hour' mark I'll have 1 component functionally completed & styled"). **This is mostly about time-boxing.**
-    1. If you get stuck - maximize your time: try building another part, going back to previous working commit, or asking your TL for help.
+   1. Plan estimated targets or waypoints ("By the '1 hour' mark I'll have 1 component functionally completed & styled"). **This is mostly about time-boxing.**
+   1. If you get stuck - maximize your time: try building another part, going back to previous working commit, or asking your TL for help.
 1. Follow [each part](#part-1).
 1. Find design resources OR use your design skills make the application look professional.
 
@@ -117,36 +120,32 @@ Add a Router to this application using [React Router](https://reacttraining.com/
 
 > 💡**Reminder:** `git commit -am 'MVP Completed'`
 
-
----------------------------------------------------------
-
+---
 
 > 🚀 **Pro Tip: Complete as many stretch goals as possible!** Even after the Sprint Challenge! You'll get a head start on important upcoming concepts!
 
-
 ## STRETCH GOALS 💪
-
 
 There's a range of difficulty in the options below. 😈
 
 _Note:_ The most difficult stretch goal(s) could take an expert an hour or more.
 
 Start with the most _familiar (or fun) sounding_ stretch goal.
-  Complete search component to your list views.
- - [ ] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
- - [ ] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
+Complete search component to your list views.
+
+- [ ] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
+- [ ] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
 - [ ] _Remember:_ `useEffect` must reference any state on which it _depends_.
 
-
-- [ ] Animate page transition and/or card loading.
-- [ ] Persist search form field(s) by using the custom hook `useLocalStorage`.
-- [ ] Add error handling for all async (axios/AJAX) calls. (Including some styled UI.)
-- [ ] Add a "details view" and route to show more details for each type of record. (Hint: Look into route parameters or nested routes.)
+* [ ] Animate page transition and/or card loading.
+* [ ] Persist search form field(s) by using the custom hook `useLocalStorage`.
+* [ ] Add error handling for all async (axios/AJAX) calls. (Including some styled UI.)
+* [ ] Add a "details view" and route to show more details for each type of record. (Hint: Look into route parameters or nested routes.)
   - [ ] Similar to the "details view" now with a UI twist: use a [modal](https://react.semantic-ui.com/modules/modal/#variations-size) component to show item view. (If you can, build [modal with routes](https://codesandbox.io/s/react-router-modal-gallery-classes-example-z98l5).)
-- [ ] Add [paging support](https://react.semantic-ui.com/addons/pagination/#types-pagination) (next/previous links.)
-- [ ] Refactor to use as few Components as possible - while still readable to a React Dev. (Hint: research these patterns: HoC, render props, FaaC.)
-- [ ] Add additional fields to search form. They are unique for each endpoint. See [**Available parameters**.](https://rickandmortyapi.com/documentation/#filter-characters), etc..
-- [ ] Use the [GraphQL Endpoint](https://rickandmortyapi.com/documentation/#graphql) with multiple search fields.
+* [ ] Add [paging support](https://react.semantic-ui.com/addons/pagination/#types-pagination) (next/previous links.)
+* [ ] Refactor to use as few Components as possible - while still readable to a React Dev. (Hint: research these patterns: HoC, render props, FaaC.)
+* [ ] Add additional fields to search form. They are unique for each endpoint. See [**Available parameters**.](https://rickandmortyapi.com/documentation/#filter-characters), etc..
+* [ ] Use the [GraphQL Endpoint](https://rickandmortyapi.com/documentation/#graphql) with multiple search fields.
 
 > 💡**Reminder:** `git commit -am 'Stretch Progress 💪'`
 
@@ -158,10 +157,8 @@ Start with the most _familiar (or fun) sounding_ stretch goal.
 - [ ] Add your TL as a Reviewer on the Pull Request.
 - [ ] TL then will count the HW as done by merging the branch into master.
 
-
 <!-- TLs: NOTE: use resources to coach, or share over zoom - avoid sharing entire solution folder. Share preview links if available. -->
 
 > **Note:** AFTER Sprint Challenge: [Solutions to many stretch goals](https://github.com/LambdaSchool/Sprint-Challenge-Single-Page-Apps-Solution/pulls) (and live demo URLs) are available from TLs (or GitHub admins.)
 
 There are many ways to implement each of these requirements!
-
