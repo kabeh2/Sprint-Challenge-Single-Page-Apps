@@ -10,36 +10,35 @@
 // };
 
 import React from "react";
-import { List, Label, Tab } from "semantic-ui-react";
+import { List, Tab } from "semantic-ui-react";
+import WelcomePage from "./WelcomePage";
+import CharacterList from "./CharacterList";
+import LocationList from "./LocationsList";
 
 const panes = [
   {
-    menuItem: "Tab 1",
-    pane: { key: "tab1", content: "This is massive tab", size: "massive" }
+    menuItem: "Home",
+    pane: { key: "home", content: <WelcomePage />, size: "massive" }
   },
   {
-    menuItem: "Tab 2",
+    menuItem: "Characters",
     pane: {
-      key: "tab2",
-      content: "This tab has a center aligned text",
+      key: "characters",
+      content: <CharacterList />,
       textAlign: "center"
     }
   },
   {
-    menuItem: "Tab 3",
+    menuItem: "Locations",
     pane: {
-      key: "tab3",
-      content: (
-        <div>
-          This tab contains an <Label>JSX</Label> element
-        </div>
-      )
+      key: "locations",
+      content: <LocationList />
     }
   },
   {
-    menuItem: "Tab 4",
+    menuItem: "Episodes",
     pane: (
-      <Tab.Pane key="tab4">
+      <Tab.Pane key="episodes">
         <p>This tab has a complex content</p>
 
         <List>
