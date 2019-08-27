@@ -10,10 +10,11 @@
 // };
 
 import React from "react";
-import { List, Tab } from "semantic-ui-react";
+import { Tab } from "semantic-ui-react";
 import WelcomePage from "./WelcomePage";
 import CharacterList from "./CharacterList";
 import LocationList from "./LocationsList";
+import EpisodeList from "./EpisodeList";
 
 const panes = [
   {
@@ -37,17 +38,10 @@ const panes = [
   },
   {
     menuItem: "Episodes",
-    pane: (
-      <Tab.Pane key="episodes">
-        <p>This tab has a complex content</p>
-
-        <List>
-          <List.Item>Apples</List.Item>
-          <List.Item>Pears</List.Item>
-          <List.Item>Oranges</List.Item>
-        </List>
-      </Tab.Pane>
-    )
+    pane: {
+      key: "episodes",
+      content: <EpisodeList />
+    }
   }
 ];
 
