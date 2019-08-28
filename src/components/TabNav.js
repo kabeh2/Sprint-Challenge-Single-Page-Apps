@@ -1,52 +1,74 @@
-// import React from "react";
-// import { Tab, Menu, Icon } from "semantic-ui-react";
-// import { NavLink } from "react-router-dom";
-
-// // TODO: Add missing tabs below
-// // Take a look at React Semantic UI tabs
-// // https://react.semantic-ui.com/modules/tab/
-// export default function TabNav() {
-
-// };
-
 import React from "react";
-import { Tab } from "semantic-ui-react";
-import WelcomePage from "./WelcomePage";
-import CharacterList from "./CharacterList";
-import LocationList from "./LocationsList";
-import EpisodeList from "./EpisodeList";
+import { NavLink } from "react-router-dom";
+import { Tab, Menu, Icon } from "semantic-ui-react";
+
+// TODO: Add missing tabs below
+// Take a look at React Semantic UI tabs
+// https://react.semantic-ui.com/modules/tab/
+
+const Nav = props => <NavLink exact {...props} />;
+
+const createLabel = (iconName, labelText) => (
+  <span>
+    <Icon name={iconName} />
+    {labelText}
+  </span>
+);
+
+const welcomeLabel = createLabel("home", "Home Page");
+const characterLabel = createLabel("users", "Characters");
+const locationsLabel = createLabel("users", "Locations");
+const episodesLabel = createLabel("users", "Episodes");
 
 const panes = [
   {
-    menuItem: "Home",
-    pane: { key: "home", content: <WelcomePage />, size: "massive" }
+    menuItem: (
+      <Menu.Item
+        key="home"
+        as={Nav}
+        to={`/home`}
+        // put active false only on this as default had home as true
+        // for whatever strange reason
+        active={false}
+        content={welcomeLabel}
+      />
+    )
+    // pane: { key: "home", content: <WelcomePage />, size: "massive" }
   },
   {
-    menuItem: "Characters",
-    pane: {
-      key: "characters",
-      content: <CharacterList />,
-      textAlign: "center"
-    }
+    menuItem: (
+      <Menu.Item
+        key="characters"
+        as={Nav}
+        to={`/characters`}
+        content={characterLabel}
+      />
+    )
   },
   {
-    menuItem: "Locations",
-    pane: {
-      key: "locations",
-      content: <LocationList />
-    }
+    menuItem: (
+      <Menu.Item
+        key="locations"
+        as={Nav}
+        to={`/locations`}
+        content={locationsLabel}
+      />
+    )
   },
   {
-    menuItem: "Episodes",
-    pane: {
-      key: "episodes",
-      content: <EpisodeList />
-    }
+    menuItem: (
+      <Menu.Item
+        key="episodes"
+        as={Nav}
+        to={`/episodes`}
+        content={episodesLabel}
+      />
+    )
   }
 ];
 
-const TabExampleContentShorthand = () => (
-  <Tab panes={panes} renderActiveOnly={false} />
-);
+const TabNav = () => {
+  return <Tab panes={panes} renderActiveOnly={false} />;
+};
 
-export default TabExampleContentShorthand;
+export default TabNav;
