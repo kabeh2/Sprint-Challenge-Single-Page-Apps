@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
@@ -32,6 +32,7 @@ export default function App() {
           }}
         />
         <Route exact path="/home" component={WelcomePage} />
+        <Redirect to="/home" />
       </Switch>
     </main>
   );
