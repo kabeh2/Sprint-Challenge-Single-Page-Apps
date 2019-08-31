@@ -10,7 +10,7 @@ const SearchBox = props => {
   return (
     <form onSubmit={props.onSubmit}>
       <input
-        type="text"
+        type="search"
         name="query"
         className="searchBox"
         placeholder="Search..."
