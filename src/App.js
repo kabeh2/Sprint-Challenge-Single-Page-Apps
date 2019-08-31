@@ -14,18 +14,27 @@ export default function App() {
       <TabNav />
       <Switch>
         <Route
+          exact
+          path="/characters/:id?"
+          render={props => {
+            return <CharacterList {...props} />;
+          }}
+        />
+        <Route
           path="/characters"
           render={() => {
             return <CharacterList />;
           }}
         />
         <Route
+          exact
           path="/locations"
           render={() => {
             return <LocationList />;
           }}
         />
         <Route
+          exact
           path="/episodes"
           render={() => {
             return <EpisodeList />;
