@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import PaginationBlock from "./Pagination/paginationBlock";
+import SearchBox from "./SearchBox";
 
 export default function CharacterList() {
+  const initialUrl = "https://rickandmortyapi.com/api/character/";
   // TODO: Add useState to track data from useEffect
   const [characterList, setCharacterList] = useState();
   const [pagination, setPagination] = useState();
-  const [apiUrl, setApiUrl] = useState(
-    "https://rickandmortyapi.com/api/character/"
-  );
+  const [apiUrl, setApiUrl] = useState(initialUrl);
   const [backBtn, setBackBtn] = useState("");
   const [nextBtn, setNextBtn] = useState("");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -22,6 +23,7 @@ export default function CharacterList() {
         const response = await axios.get(apiUrl);
         console.log(response.data.info);
         setCharacterList(response.data.results);
+
         setPagination(response.data.info);
         setBackBtn(response.data.info.prev);
         setNextBtn(response.data.info.next);
@@ -40,6 +42,13 @@ export default function CharacterList() {
     setApiUrl(nextBtn);
   };
 
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    setApiUrl(`${apiUrl}?page=1&name=${query}`);
+    setQuery("");
+  };
+
   const characterRender = characterList ? (
     characterList.map(character => (
       <CharacterCard {...character} key={character.id} />
@@ -53,6 +62,13 @@ export default function CharacterList() {
 
   return (
     <React.Fragment>
+      <SearchBox
+        characters={characterList}
+        setCharacterList={setCharacterList}
+        query={query}
+        setQuery={setQuery}
+        onSubmit={handleSubmit}
+      />
       <section className="character-list grid-view">{characterRender}</section>
 
       <PaginationBlock
