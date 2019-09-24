@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Sprint-Challenge-Single-Page-Apps/static/css/main.905afddb.chunk.css",
+    "main.js": "/Sprint-Challenge-Single-Page-Apps/static/js/main.3ab83fe9.chunk.js",
+    "main.js.map": "/Sprint-Challenge-Single-Page-Apps/static/js/main.3ab83fe9.chunk.js.map",
+    "runtime~main.js": "/Sprint-Challenge-Single-Page-Apps/static/js/runtime~main.d201d825.js",
+    "runtime~main.js.map": "/Sprint-Challenge-Single-Page-Apps/static/js/runtime~main.d201d825.js.map",
+    "static/css/2.e9ebe8e2.chunk.css": "/Sprint-Challenge-Single-Page-Apps/static/css/2.e9ebe8e2.chunk.css",
+    "static/js/2.b508ac80.chunk.js": "/Sprint-Challenge-Single-Page-Apps/static/js/2.b508ac80.chunk.js",
+    "static/js/2.b508ac80.chunk.js.map": "/Sprint-Challenge-Single-Page-Apps/static/js/2.b508ac80.chunk.js.map",
+    "index.html": "/Sprint-Challenge-Single-Page-Apps/index.html",
+    "precache-manifest.c27b6a1c17fc29e34890e32420204737.js": "/Sprint-Challenge-Single-Page-Apps/precache-manifest.c27b6a1c17fc29e34890e32420204737.js",
+    "service-worker.js": "/Sprint-Challenge-Single-Page-Apps/service-worker.js",
+    "static/css/2.e9ebe8e2.chunk.css.map": "/Sprint-Challenge-Single-Page-Apps/static/css/2.e9ebe8e2.chunk.css.map",
+    "static/css/main.905afddb.chunk.css.map": "/Sprint-Challenge-Single-Page-Apps/static/css/main.905afddb.chunk.css.map",
+    "static/media/semantic.min.css": "/Sprint-Challenge-Single-Page-Apps/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
