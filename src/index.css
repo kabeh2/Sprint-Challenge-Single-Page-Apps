@@ -37,3 +37,10 @@ main {
 header h1 {
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .ui.attached.tabular.menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
